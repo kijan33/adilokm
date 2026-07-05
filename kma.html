@@ -1,369 +1,353 @@
 <!DOCTYPE html>
-<html lang="am" dir="ltr">
+<html lang="am">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adilo Kidane Mihret Building Fund Digital Card</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>የአዲሎ ቅ/ለአታ ማሪያም ህንፃ አሰሪ</title>
     <style>
-        /* Tokenized Custom Properties Engine */
-        :root {
-            --font-primary: 'Noto Sans Ethiopic', 'Poppins', system-ui, sans-serif;
-            --font-secondary: 'Poppins', system-ui, sans-serif;
-
-            /* HSL Fluid System Colors */
-            --hue: 199;
-            --primary: hsl(var(--hue), 89%, 48%);
-            --primary-hover: hsl(var(--hue), 89%, 38%);
-            --surface: hsl(0, 0%, 100%);
-            --background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(215, 25%, 92%) 100%);
-            --text-main: hsl(222, 47%, 11%);
-            --text-muted: hsl(215, 16%, 47%);
-            --border: hsl(214, 32%, 91%);
-            --card-border: rgba(255, 255, 255, 0.6);
-            
-            /* Traditional Palette Accents */
-            --eth-green: #006643;
-            --eth-yellow: #cc9900;
-            --eth-red: #cc0000;
-
-            /* Component Configurations */
-            --shadow-elevation-low: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
-            --shadow-elevation-high: 0 20px 40px -15px rgba(15, 23, 42, 0.12), 0 15px 25px -20px rgba(15, 23, 42, 0.08);
-            --radius-lg: 24px;
-            --radius-md: 14px;
-            --transition-smooth: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
-        /* Dark Mode Override Ecosystem */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --surface: hsl(222, 47%, 11%);
-                --background: linear-gradient(135deg, hsl(222, 47%, 6%) 0%, hsl(223, 47%, 12%) 100%);
-                --text-main: hsl(210, 40%, 98%);
-                --text-muted: hsl(215, 20%, 65%);
-                --border: hsl(217, 32%, 18%);
-                --card-border: rgba(255, 255, 255, 0.05);
-                --shadow-elevation-high: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            }
-        }
-
-        /* Reset & Base System defaults */
-        *, *::before, *::after {
-            box-sizing: border-box;
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@300;400;700&display=swap');
+        
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: var(--font-primary);
-            background: var(--background);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
-            padding: 24px;
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
+            font-family: 'Noto Serif Ethiopic', 'Times New Roman', serif;
+            background-color: #f2ede4;
+            color: #2b2b2b;
+            line-height: 1.6;
+            padding: 20px 10px;
         }
 
-        /* Engineered UI Card Container */
-        .premium-card {
-            background: var(--surface);
-            width: 100%;
-            max-width: 440px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-elevation-high);
+        .container {
+            max-width: 650px;
+            margin: 30px auto;
+        }
+
+        /* Modern Premium Ticket Design */
+        .coupon-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(92, 6, 18, 0.15);
             overflow: hidden;
-            border: 1px solid var(--card-border);
-            transition: var(--transition-smooth);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             position: relative;
         }
 
-        .premium-card:hover, .premium-card:focus-within {
-            transform: translateY(-6px) scale(1.01);
-            box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.2);
+        /* Top Accent Border */
+        .coupon-card::before {
+            content: '';
+            display: block;
+            height: 8px;
+            background: linear-gradient(90deg, #d4af37, #5c0612, #d4af37);
         }
 
-        /* OPTION 1: Modern Centered Split Stack Header Style */
-        .card-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            padding: 28px 24px;
-            background: linear-gradient(to bottom, rgba(14, 165, 233, 0.04), transparent);
+        /* Elegant Header styling */
+        .header {
+            text-align: center;
+            padding: 30px 25px 20px 25px;
+            background: linear-gradient(to bottom, #fffcf7, #ffffff);
+        }
+
+        .church-title {
+            font-size: 1.4rem;
+            color: #5c0612;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .diocese {
+            font-size: 0.95rem;
+            color: #555;
+            max-width: 500px;
+            margin: 0 auto 20px auto;
+            font-weight: 400;
+        }
+
+        .scripture-box {
+            background: #fdfaf2;
+            border-top: 1px solid #eadeb8;
+            border-bottom: 1px solid #eadeb8;
+            padding: 12px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .scripture-text {
+            color: #8c6212;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .scripture-ref {
+            font-size: 0.85rem;
+            color: #666;
+            display: block;
+        }
+
+        /* Center Content Split */
+        .main-content {
+            text-align: center;
+            padding: 10px 25px;
+        }
+
+        .purpose-title {
+            font-size: 1.6rem;
+            color: #5c0612;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .coupon-tag {
+            display: inline-block;
+            background: rgba(92, 6, 12, 0.08);
+            color: #5c0612;
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid rgba(92, 6, 12, 0.15);
+        }
+
+        /* Elegant Ticket Ribbon Price Plate */
+        .price-section {
+            background: #5c0612;
+            color: #ffffff;
+            margin: 25px -25px;
+            padding: 20px;
             position: relative;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
         }
 
-        /* Custom bottom divider node decoration */
-        .card-header::after {
+        /* Ticket notches simulation */
+        .price-section::before, .price-section::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 10%;
-            width: 80%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--border), transparent);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: #f2ede4;
+            border-radius: 50%;
         }
+        .price-section::before { left: -10px; }
+        .price-section::after { right: -10px; }
 
-        .header-title-am {
-            font-size: clamp(1.5rem, 4vw, 1.8rem);
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.02);
-        }
-        
-        .header-title-am span:nth-child(1) { color: var(--eth-green); }
-        .header-title-am span:nth-child(2) { color: var(--eth-yellow); }
-        .header-title-am span:nth-child(3) { color: var(--eth-red); }
-
-        .header-title-en {
-            font-family: var(--font-secondary);
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--text-muted);
+        .price-label {
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            text-indent: 6px; /* Offsets right-padding letter spacing alignment */
+            letter-spacing: 1px;
+            color: #eadeb8;
+            display: block;
+            margin-bottom: 2px;
         }
 
-        /* Aspect-Ratio Driven Hero Container */
-        .image-viewport {
-            width: 100%;
-            aspect-ratio: 16 / 10;
-            overflow: hidden;
-            position: relative;
-            background-color: var(--border);
-        }
-
-        .image-viewport img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-smooth);
-        }
-
-        .premium-card:hover .image-viewport img {
-            transform: scale(1.05);
-        }
-
-        /* Floating Badge Component */
-        .badge-anchor {
-            padding: 0 28px;
-            margin-top: -22px;
-            position: relative;
-            z-index: 2;
+        .price-row {
             display: flex;
             justify-content: center;
+            align-items: baseline;
+            gap: 5px;
         }
 
-        .pill-badge {
-            background: var(--primary);
-            color: hsl(0, 0%, 100%);
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
-            text-align: center;
-            border: 3px solid var(--surface);
-            letter-spacing: 0.2px;
-            white-space: nowrap;
+        .price-amount {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #d4af37;
+            line-height: 1;
         }
 
-        /* Content Module Structuring */
-        .card-body {
-            padding: 28px;
-        }
-
-        .interactive-container {
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 24px;
-            background: linear-gradient(to bottom right, var(--surface), rgba(0, 0, 0, 0.005));
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .description-paragraph {
-            color: var(--text-main);
-            font-size: 0.98rem;
-            line-height: 1.75;
-            text-align: justify;
-            font-weight: 400;
-            opacity: 0.9;
-        }
-
-        /* Interactive Action Elements */
-        .actionable-field {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            font-family: var(--font-secondary);
+        .price-currency {
             font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-main);
-            padding: 14px;
-            background: var(--surface);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border);
-            text-decoration: none;
-            transition: var(--transition-smooth);
-            width: 100%;
-            box-shadow: var(--shadow-elevation-low);
+            color: #ffffff;
+            font-weight: bold;
         }
 
-        .actionable-field:focus {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
+        /* Modernized Bank Box */
+        .bank-card {
+            background: #fafafa;
+            border: 1px dashed #d4af37;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 10px;
         }
 
-        .phone-link:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background: rgba(14, 165, 233, 0.03);
+        .bank-name {
+            font-size: 0.95rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
         }
 
-        .interactive-account {
+        .account-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .copy-btn {
+            background: #ffffff;
+            color: #5c0612;
+            border: 1.5px solid #5c0612;
+            padding: 8px 20px;
+            border-radius: 6px;
             cursor: pointer;
-            position: relative;
-            user-select: none;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .interactive-account:hover {
-            border-color: var(--primary);
-            background: rgba(14, 165, 233, 0.03);
+        .copy-btn:hover {
+            background: #5c0612;
+            color: #ffffff;
         }
 
-        /* Smart Micro-copy Interactive Pseudo-Labeling */
-        .interactive-account::after {
-            content: '👁️ Click to view / copy';
-            position: absolute;
-            bottom: -20px;
-            font-size: 0.68rem;
-            color: var(--text-muted);
-            font-family: var(--font-secondary);
-            font-weight: 500;
-            letter-spacing: 0.3px;
-            transition: var(--transition-smooth);
-        }
-
-        .interactive-account.revealed::after {
-            content: '📋 Tap to Copy Details';
-            color: var(--primary);
-        }
-
-        .interactive-account.copied::after {
-            content: '✅ Copied to Clipboard!';
-            color: #10b981;
-        }
-
-        /* Footer Attribution */
-        .card-footer {
-            padding: 0 28px 28px 28px;
+        /* Footer Info */
+        .footer-info {
+            padding: 20px 25px 30px 25px;
+            background: #fffcf7;
+            border-top: 1px solid #f2ede4;
             text-align: center;
         }
 
-        .attribution {
-            font-family: var(--font-secondary);
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
+        .contact-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 6px;
         }
 
-        .attribution strong {
-            color: var(--text-main);
-            font-weight: 600;
+        .phone-numbers {
+            font-size: 1.15rem;
+            color: #5c0612;
+            font-weight: 700;
+            word-spacing: 5px;
         }
 
-        /* Optimized Clean Print Setup styling */
-        @media print {
-            body { background: none; color: #000; padding: 0; }
-            .premium-card { box-shadow: none; border: 1px solid #000; transform: none !important; }
-            .interactive-account::after { display: none; }
+        .credits {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 25px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        /* Smooth Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #222222;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: bottom 0.3s ease-in-out;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            bottom: 30px;
         }
     </style>
 </head>
 <body>
 
-    <article class="premium-card" aria-label="Adilo Kidane Mihret Donation Voucher">
-        <header class="card-header">
-            <h1 class="header-title-am">
-                <span>ኪዳነ</span> <span>ምሕ</span><span>ረት</span>
-            </h1>
-            <div class="header-title-en">Adilo</div>
-        </header>
-
-        <div class="image-viewport">
-            <img src="km.jpg" alt="Conceptual architectural rendering layout of Adilo Kidane Mihret Church Building">
-        </div>
-
-        <div class="badge-anchor">
-            <span class="pill-badge">ለህንፃ ግንባታ የተዘጋጀ ኮፖን</span>
-        </div>
-
-        <div class="card-body">
-            <div class="interactive-container">
-                <p class="description-paragraph">
-                    በኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ቤተ ክርስቲያን በከምባታ ጠምባሮ ሀገረ ስብከት የአዲሎ ቅድስት ኪዳነ ምሕረት ቤተ ክርስቲያን ለህንፃ ግንባታ የተዘጋጀ ኮፖን።
-                </p>
+    <div class="container">
+        <div class="coupon-card">
+            
+            <!-- Header Section -->
+            <div class="header">
+                <div class="church-title">በኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ቤተ ክርስቲያን</div>
+                <div class="diocese">በከምባታ ጠምባሮ ሀላባ ሀገረ ስብከት የአዲሎ ቅድስት ኪዳነ ምሕረት ቤተ ክርስቲያን</div>
                 
-                <a href="tel:0926327137" class="actionable-field phone-link" title="Call primary organizational point of contact">
-                    <span>📱</span> 0926327137
-                </a>
-
-                <button class="actionable-field interactive-account" id="secureAccountWidget" title="Click to reveal and copy Bank Account Details" aria-live="polite">
-                    <span>💳</span> <span id="visibleAccountNumber">100055*****89</span>
-                </button>
+                <div class="scripture-box">
+                    <span class="scripture-text">"በኃይልህ ሰላም፥ በጌጠኛ ቤትህም ልማት ይሁን።"</span>
+                    <span class="scripture-ref">መዝሙር 122፥7</span>
+                </div>
             </div>
-        </div>
 
-        <footer class="card-footer">
-            <p class="attribution">designed by <strong>Jembo printing center Adilo</strong></p>
-        </footer>
-    </article>
+            <!-- Core Campaign & Price Block -->
+            <div class="main-content">
+                <h1 class="purpose-title">የአዲሎ ቅ/በዓታ ማሪያም ህንፃ አሰሪ</h1>
+                <span class="coupon-tag">ለህንፃ ማነጫ የተዘጋጀ የረድኤት ኩፖን</span>
+                
+                <div class="price-section">
+                    <span class="price-label">የኩፖን ዋጋ / Value</span>
+                    <div class="price-row">
+                        <span class="price-amount">500</span>
+                        <span class="price-currency">ብር</span>
+                    </div>
+                </div>
+
+                <!-- Actionable Bank Area -->
+                <div class="bank-card">
+                    <div class="bank-name">የኢትዮጵያ ንግድ ባንክ (CBE)</div>
+                    <div class="account-number" id="accountNo">1000081363343</div>
+                    <button class="copy-btn" onclick="copyAccount()">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle;">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        አካውንቱን ገልብጥ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Details -->
+            <div class="footer-info">
+                <div class="contact-label">ለበለጠ መረጃ በነዚህ ስልኮች ይደውሉ፦</div>
+                <div class="phone-numbers">0938987988 • 0910340004 • 0919839512</div>
+                
+                <div class="credits">
+                    Designed by Jembo printing center Adilo
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Feedback Banner -->
+    <div class="toast" id="toast">የአካውንት ቁጥሩ በተሳካ ሁኔታ ተገልብጧል!</div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const accountWidget = document.getElementById('secureAccountWidget');
-            const targetDisplay = document.getElementById('visibleAccountNumber');
+        function copyAccount() {
+            const accountNo = document.getElementById('accountNo').innerText;
             
-            // Hardcoded real secure account payload data string 
-            const dynamicSecurePayload = '1000554321089';
-            let fullyRevealed = false;
-
-            accountWidget.addEventListener('click', async () => {
-                if (!fullyRevealed) {
-                    // Stage 1: Reveal string visually
-                    targetDisplay.textContent = dynamicSecurePayload;
-                    accountWidget.classList.add('revealed');
-                    fullyRevealed = true;
-                } else {
-                    // Stage 2: Clipboard Write Interaction Loop
-                    try {
-                        await navigator.clipboard.writeText(dynamicSecurePayload);
-                        accountWidget.classList.remove('revealed');
-                        accountWidget.classList.add('copied');
-                        
-                        // Resets dynamic state properties cleanly after momentary confirmation delay
-                        setTimeout(() => {
-                            accountWidget.classList.remove('copied');
-                            accountWidget.classList.add('revealed');
-                        }, 2000);
-                    } catch (err) {
-                        console.error('Failed operational data clipboard sequence copy: ', err);
-                    }
-                }
+            navigator.clipboard.writeText(accountNo).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
+            }).catch(err => {
+                // Fallback for older browsers
+                const tempInput = document.createElement('input');
+                tempInput.value = accountNo;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
             });
-        });
+        }
     </script>
+
 </body>
 </html>
